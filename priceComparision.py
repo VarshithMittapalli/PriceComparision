@@ -28,7 +28,6 @@ def scrape(url):
         except Exception as e:
             print('data from Flipkart is not found')
 
-
     elif url == urlA:
         try:
             res = requests.get(url).content
@@ -85,7 +84,6 @@ def scrape(url):
         except Exception as e:
             print('data from Lot mobiles is not found')
 
-
     elif url == urlB:
         try:
             res = requests.get(url).content
@@ -100,12 +98,11 @@ def scrape(url):
         except Exception as e:
             print('data from Bajaj is not found')
 
-
-
 def priceComparision():
     print(f'Showing results for : {keyword} in different sites')
     for item in prices.items():
         print(item[0],":",item[1])
+        
 if __name__ == '__main__':
     print('connecting to Flipkart.com')
     scrape(urlF)
